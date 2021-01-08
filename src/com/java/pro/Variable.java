@@ -11,9 +11,15 @@ public class Variable {
         age+=1;
         System.out.println("小狗郭金龙的年龄是："+age);
     }
+    public void muGouAge(){
+        int age=3;
+        age+=5;
+        System.out.println("小母狗郭金龙的年龄是："+age);
+    }
 
     public static void main(String[] args) {
         Variable v= new Variable();
         v.gouAge();
+        v.muGouAge();
     }
 }
