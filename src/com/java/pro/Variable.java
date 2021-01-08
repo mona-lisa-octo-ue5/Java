@@ -6,4 +6,14 @@ public class Variable {
     public void method(){
         int i=0;
     }
+    public void gouAge(){
+        int age=2;
+        age+=1;
+        System.out.println("小狗郭金龙的年龄是："+age);
+    }
+
+    public static void main(String[] args) {
+        Variable v= new Variable();
+        v.gouAge();
+    }
 }
