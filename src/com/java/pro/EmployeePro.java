@@ -6,6 +6,7 @@ public class EmployeePro {
     public String name;
     private double salary;
     public EmployeePro(String ename){
+        
         name=ename;
     }
     public void setSalary(double eSalary){
