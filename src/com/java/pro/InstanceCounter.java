@@ -8,4 +8,11 @@ public class InstanceCounter {
     private static void addInstance(){
         numInstances++;
     }
+    InstanceCounter(){
+        InstanceCounter.addInstance();
+    }
+
+    public static void main(String[] args) {
+        
+    }
 }
