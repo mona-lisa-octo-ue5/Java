@@ -50,6 +50,22 @@ public class JavaDateDemo {
         }catch (Exception e){
             System.out.println("Got an exception!");
         }
+        System.out.println();
+        DiffDemo();
+    }
+
+    public static void DiffDemo(){
+        try{
+            long start=System.currentTimeMillis();
+            System.out.println(new Date()+"\n");
+            Thread.sleep(5*60*10);
+            System.out.println(new Date()+"\n");
+            long end=System.currentTimeMillis();
+            long diff=end-start;
+            System.out.println("Difference is:"+diff);
+        }catch (Exception e){
+            System.out.println("Got an exception");
+        }
     }
 
     public static void SleepDemo(){
