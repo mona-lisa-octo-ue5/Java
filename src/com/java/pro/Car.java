@@ -52,6 +52,10 @@ public class Car extends Vehicle{
             System.out.print("\n");
         }
 
+        int ab=8;
+        float zd=13.65f;
+        byte cd=0x4a;
+
     }
 }
 /*
