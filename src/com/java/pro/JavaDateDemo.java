@@ -1,5 +1,6 @@
 package com.java.pro;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -38,8 +39,22 @@ public class JavaDateDemo {
         System.out.printf("两位数字的月份（不足两位前面补0）：%tm%n",date);
         System.out.printf("两位数字的日（不足两位前面补0）：%td%n",date);
         System.out.printf("月份的日（前面不补0）：%te",date);
+        System.out.println(str);
+        parsingStringTime(args);
 
+    }
 
+    public static void parsingStringTime(String args[]){
+        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+        String input = args.length == 0 ? "2007-12-01" : args[0];
+        System.out.print(input+" Parses as ");
+        Date t;
+        try{
+            t=ft.parse(input);
+            System.out.println(t);
+        }catch (ParseException e){
+            System.out.println("Unparseable using "+ft);
+        }
     }
 
 }
