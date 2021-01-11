@@ -39,14 +39,32 @@ public class JavaDateDemo {
         System.out.printf("两位数字的月份（不足两位前面补0）：%tm%n",date);
         System.out.printf("两位数字的日（不足两位前面补0）：%td%n",date);
         System.out.printf("月份的日（前面不补0）：%te",date);
-        System.out.println(str);
+        System.out.println();
         parsingStringTime(args);
+        System.out.println();
+        SleepDemo();
+        try{
+            System.out.println(new Date()+"\n");
+            Thread.sleep(1000*3);
+            System.out.println(new Date()+"\n");
+        }catch (Exception e){
+            System.out.println("Got an exception!");
+        }
+    }
 
+    public static void SleepDemo(){
+        try{
+            System.out.println(new Date()+"\n");
+            Thread.sleep(1000*3);
+            System.out.println(new Date()+"\n");
+        }catch (Exception e){
+            System.out.println("Got an exception!");
+        }
     }
 
     public static void parsingStringTime(String args[]){
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
-        String input = args.length == 0 ? "2007-12-01" : args[0];
+        String input = args.length == 0 ? "1818-11-11" : args[0];
         System.out.print(input+" Parses as ");
         Date t;
         try{
