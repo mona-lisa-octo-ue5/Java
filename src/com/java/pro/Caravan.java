@@ -75,6 +75,7 @@ public class Caravan {
         char uniChar='\u039A';
         char[] charArray={'a','b','c','d','e'};
 
+        System.out.println("访问\"渣渣日记!\"");
 
     }
 }
