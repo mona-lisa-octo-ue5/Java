@@ -10,6 +10,8 @@ public class Caravan {
         int b=20;
         int c=25;
         int d=25;
+        int e=++a;
+        int f=--b;
         System.out.println("a+b="+(a+b));
         System.out.println("a-b="+(a-b));
         System.out.println("a*b="+(a*b));
@@ -20,5 +22,7 @@ public class Caravan {
         System.out.println("a-- ="+(a--));
         System.out.println("d++ ="+(d++));
         System.out.println("++d ="+(++d));
+        System.out.println("进行自增运算后的值等于"+e);
+        System.out.println("进行自减运算后的值等于"+f);
     }
 }
