@@ -44,6 +44,14 @@ public class Car extends Vehicle{
             System.out.print(i);
             System.out.print("\n");
         }
+        for (int i:numbers){
+            if (i==30){
+                continue;
+            }
+            System.out.print(i);
+            System.out.print("\n");
+        }
+
     }
 }
 /*
