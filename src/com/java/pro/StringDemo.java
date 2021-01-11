@@ -35,6 +35,13 @@ public class StringDemo {
         System.out.println(res);
 
 
+        char[] Str1 = {'h','e','l','l','o',' '};
+        String Str2="";
+        Str2= Str2.copyValueOf(Str1);
+        System.out.println("返回结果："+Str2);
+
+        Str2 = Str2.copyValueOf(Str1,1,2);
+        System.out.println("返回结果："+Str2);
 
 
     }
