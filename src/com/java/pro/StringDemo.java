@@ -12,6 +12,22 @@ public class StringDemo {
 
         System.out.println("我的名字是 ".concat("Runoob"));
 
+        String s = "www.runoob.com";
+        char result2 = s.charAt(6);
+        System.out.println(result2);
+
+        String str1 = "Strings";
+        String str2 = "Strings";
+        String str3 = "Strings123";
+
+        int result = str1.compareTo( str2 );
+        System.out.println(result);
+
+        result = str2.compareTo( str3 );
+        System.out.println(result);
+
+        result = str3.compareTo( str1 );
+        System.out.println(result);
 
     }
 }
