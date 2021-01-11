@@ -36,6 +36,14 @@ public class Car extends Vehicle{
             System.out.print(name);
             System.out.print(",");
         }
+
+        for (int i:numbers){
+            if (i==30){
+                break;
+            }
+            System.out.print(i);
+            System.out.print("\n");
+        }
     }
 }
 /*
