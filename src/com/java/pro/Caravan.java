@@ -24,5 +24,11 @@ public class Caravan {
         System.out.println("++d ="+(++d));
         System.out.println("进行自增运算后的值等于"+e);
         System.out.println("进行自减运算后的值等于"+f);
+        System.out.println("a==b ="+(a==b));
+        System.out.println("a!=b ="+(a!=b));
+        System.out.println("a>b ="+(a>b));
+        System.out.println("a<b ="+(a<b));
+        System.out.println("b>=a ="+(b>=a));
+        System.out.println("b<=a ="+(b<=a));
     }
 }
