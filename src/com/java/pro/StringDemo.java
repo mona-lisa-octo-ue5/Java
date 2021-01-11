@@ -47,5 +47,8 @@ public class StringDemo {
         res=strEnds.endsWith("com");
         System.out.println("返回值="+res);
 
+        res=Str2.equals(strEnds);
+        System.out.println("返回值="+res);
+
     }
 }
