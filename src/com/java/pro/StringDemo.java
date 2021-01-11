@@ -50,5 +50,9 @@ public class StringDemo {
         res=Str2.equals(strEnds);
         System.out.println("返回值="+res);
 
+        String strZZ=new String("www.baidu.com");
+        System.out.println("返回值："+ strZZ.matches("(.*)baidu(.*)"));
+
+
     }
 }
