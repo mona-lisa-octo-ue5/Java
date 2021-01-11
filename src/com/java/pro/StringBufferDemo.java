@@ -12,5 +12,10 @@ public class StringBufferDemo {
         sb.delete(5,8);
         System.out.println(sb);
 
+        StringBuffer sBuffer = new StringBuffer("菜鸟教程官网：");
+        sBuffer.append("www");
+        sBuffer.append(".runoob");
+        sBuffer.append(".com");
+        System.out.println(sBuffer);
     }
 }
