@@ -43,6 +43,9 @@ public class StringDemo {
         Str2 = Str2.copyValueOf(Str1,1,2);
         System.out.println("返回结果："+Str2);
 
+        String strEnds = new String("www.baidu.com");
+        res=strEnds.endsWith("com");
+        System.out.println("返回值="+res);
 
     }
 }
