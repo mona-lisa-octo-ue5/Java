@@ -45,8 +45,23 @@ public static void main(String[] args) {
     int[] array = {1,2,3,4,5,6,7,8,9,10};
     printArray(array);
     reverse(array);
+    twoDimensionalArray();
+
 
 }
+    public static void twoDimensionalArray(){
+        String s[][] = new String[2][];
+        s[0]= new String[2];
+        s[1]= new String[3];
+
+        s[0][0]=new String("Good");
+        s[0][1]=new String("Luck");
+        s[1][0]=new String("to");
+        s[1][1]=new String("you");
+        s[1][2]=new String("!");
+
+        System.out.println(s);
+    }
 
     public static void printArray(int[] array){
         for (int i=0; i<array.length; i++){
