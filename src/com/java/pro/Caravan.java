@@ -5,6 +5,12 @@ public class Caravan {
     private String model;
     private String year;
 
+    private static void test(double num){
+        System.out.println("Math.floor("+num+")="+Math.floor(num));
+        System.out.println("Math.round("+num+")="+Math.round(num));
+        System.out.println("Math.ceil("+num+")="+Math.ceil(num));
+    }
+
     public static void main(String[] args) {
         int a=10;
         int b=20;
@@ -59,5 +65,11 @@ public class Caravan {
         boolean jj=(ff<4)&&(ff++<10);
         System.out.println("使用短路逻辑运算符的结果为"+jj);
         System.out.println("ff的结果为"+ff);
+
+        double[] nums={1.4,1.5,1.6,-1.4,-1.5,-1.6};
+        for (double num:nums){
+            test(num);
+        }
+
     }
 }
