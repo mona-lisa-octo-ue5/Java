@@ -30,5 +30,24 @@ public class Caravan {
         System.out.println("a<b ="+(a<b));
         System.out.println("b>=a ="+(b>=a));
         System.out.println("b<=a ="+(b<=a));
+
+        int aa=60;
+        int bb=13;
+        int cc=0;
+        cc=aa & bb;
+        System.out.println("aa&bb="+cc);
+        cc=aa | bb;
+        System.out.println("aa|bb="+cc);
+        cc=aa^bb;
+        System.out.println("aa^bb="+cc);
+        cc=~aa;
+        System.out.println("~aa="+cc);
+        cc=aa<<2;
+        System.out.println("aa<<2="+cc);
+        cc=aa>>2;
+        System.out.println("aa>>2="+cc);
+        cc=aa>>>2;
+        System.out.println("aa>>>2="+cc);
+
     }
 }
