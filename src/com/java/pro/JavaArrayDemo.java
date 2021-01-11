@@ -22,5 +22,21 @@ public static void main(String[] args) {
         total += myList[i];
     }
     System.out.println("总和为："+total);
+
+    double[] myList2 = {1.9,2.9,3.4,3.5};
+    for (int i=0; i<myList2.length; i++){
+        System.out.println(myList2[i]+" ");
+    }
+    double total2=0;
+    for (int i=0;i<myList2.length;i++){
+        total2+=myList2[i];
+    }
+    System.out.println("Total is "+total2);
+    double max = myList2[0];
+    for (int i=1; i <myList2.length; i++){
+        if (myList2[i]>max) max=myList2[i];
+    }
+    System.out.println("Max is "+max);
 }
+
 }
