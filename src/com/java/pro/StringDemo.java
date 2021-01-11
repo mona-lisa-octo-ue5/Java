@@ -60,8 +60,6 @@ public class StringDemo {
         byte[] strGBB=strGB.getBytes();
         System.out.println("返回值："+strGBB);
         strGBB=strGB.getBytes();
-        strGBB = strGB.getBytes("UTF-8");
-        System.out.println("返回值："+strGBB);
 
     }
 }
