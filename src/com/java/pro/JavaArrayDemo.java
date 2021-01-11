@@ -37,6 +37,9 @@ public static void main(String[] args) {
         if (myList2[i]>max) max=myList2[i];
     }
     System.out.println("Max is "+max);
-}
 
+    for (double element: myList2) {
+        System.out.println(element);
+    }
+}
 }
