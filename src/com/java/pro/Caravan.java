@@ -49,5 +49,11 @@ public class Caravan {
         cc=aa>>>2;
         System.out.println("aa>>>2="+cc);
 
+        boolean dd=true;
+        boolean ee=false;
+        System.out.println("dd&&ee="+(dd&&ee));
+        System.out.println("dd||ee="+(dd||ee));
+        System.out.println("!(dd&&ee)="+!(dd&&ee));
+
     }
 }
