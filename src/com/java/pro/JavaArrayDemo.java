@@ -41,5 +41,18 @@ public static void main(String[] args) {
     for (double element: myList2) {
         System.out.println(element);
     }
+
+    int[] array = {1,2,3,4,5,6,7,8,9,10};
+    printArray(array);
+
+
 }
+
+    public static void printArray(int[] array){
+        for (int i=0; i<array.length; i++){
+            System.out.println(array[i]+" ");
+        }
+    }
+
+
 }
