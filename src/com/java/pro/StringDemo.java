@@ -29,5 +29,13 @@ public class StringDemo {
         result = str3.compareTo( str1 );
         System.out.println(result);
 
+        String str22="String2";
+        StringBuffer str33=new StringBuffer("Strings");
+        boolean res = str1.contentEquals(str33);
+        System.out.println(res);
+
+
+
+
     }
 }
