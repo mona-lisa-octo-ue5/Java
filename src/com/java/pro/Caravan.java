@@ -55,5 +55,9 @@ public class Caravan {
         System.out.println("dd||ee="+(dd||ee));
         System.out.println("!(dd&&ee)="+!(dd&&ee));
 
+        int ff=5;
+        boolean jj=(ff<4)&&(ff++<10);
+        System.out.println("使用短路逻辑运算符的结果为"+jj);
+        System.out.println("ff的结果为"+ff);
     }
 }
