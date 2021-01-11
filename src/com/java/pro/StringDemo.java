@@ -10,6 +10,7 @@ public class StringDemo {
         int len = site.length();
         System.out.println( "菜鸟教程网址长度 : " + len );
 
+        System.out.println("我的名字是 ".concat("Runoob"));
 
 
     }
