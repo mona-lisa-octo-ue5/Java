@@ -20,6 +20,10 @@ public class Car extends Vehicle{
             System.out.println("value of y:"+y);
             y++;
         }while (y<20);
+
+        for (int i=10;i<20;i++){
+            System.out.println("value of i:"+i);
+        }
     }
 }
 /*
