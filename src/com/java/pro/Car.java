@@ -9,11 +9,17 @@ public class Car extends Vehicle{
         System.out.println(result);
 
         int x=10;
+        int y=10;
         while (x<20){
             System.out.println("value of x:"+x);
             x++;
 //            System.out.println("\n");
         }
+
+        do{
+            System.out.println("value of y:"+y);
+            y++;
+        }while (y<20);
     }
 }
 /*
