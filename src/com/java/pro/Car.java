@@ -56,6 +56,12 @@ public class Car extends Vehicle{
         float zd=13.65f;
         byte cd=0x4a;
 
+        System.out.println("90度的正xuan值："+Math.sin(Math.PI/2));
+        System.out.println("0度的值："+Math.cos(0));
+        System.out.println("60度的正切值："+Math.tan(Math.PI/3));
+        System.out.println("1的反正切值： " + Math.atan(1));
+        System.out.println("π/2的角度值：" + Math.toDegrees(Math.PI/2));
+        System.out.println(Math.PI);
     }
 }
 /*
