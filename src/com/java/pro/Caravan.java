@@ -77,5 +77,10 @@ public class Caravan {
 
         System.out.println("访问\"渣渣日记!\"");
 
+        String str="狗🐶郭金龙";
+        String str2=new String("狗仔郭金龙");
+
+
+
     }
 }
