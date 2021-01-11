@@ -71,5 +71,10 @@ public class Caravan {
             test(num);
         }
 
+        char ch='a';
+        char uniChar='\u039A';
+        char[] charArray={'a','b','c','d','e'};
+
+
     }
 }
