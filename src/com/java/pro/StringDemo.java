@@ -37,7 +37,6 @@ public class StringDemo {
         boolean res = str1.contentEquals(str33);
         System.out.println(res);
 
-
         char[] Str1 = {'h','e','l','l','o',' '};
         String Str2="";
         Str2= Str2.copyValueOf(Str1);
@@ -60,6 +59,7 @@ public class StringDemo {
         byte[] strGBB=strGB.getBytes();
         System.out.println("返回值："+strGBB);
         strGBB=strGB.getBytes();
+
 
     }
 }
