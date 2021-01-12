@@ -68,6 +68,19 @@ public class JavaPatternDemo {
         RE_INPUT=m.replaceAll(RE_REPLACE);
         System.out.println(RE_INPUT);
     }
+    private static String AP_REGEX="a*b";
+    private static String AP_INPUT="aabfooaabfooabfoobkkk";
+    private static String AP_REPLACE="_";
+    public static void method6(){
+        Pattern p=Pattern.compile(AP_REGEX);
+        Matcher m=p.matcher(AP_INPUT);
+        StringBuffer sb=new StringBuffer();
+        while (m.find()){
+            m.appendReplacement(sb,AP_REPLACE);
+        }
+        m.appendTail(sb);
+        System.out.println(sb.toString());
+    }
 
 
     public static void main(String[] args) {
@@ -81,6 +94,8 @@ public class JavaPatternDemo {
         method4();
         ou();
         method5();
+        ou();
+        method6();
         ou();
 
     }
