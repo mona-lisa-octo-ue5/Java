@@ -38,9 +38,28 @@ public class JavaPatternDemo {
             System.out.println("end():"+m.end());
         }
     }
+    private static final String REGEX2="foo";
+    private static final String INPUT2="fooooooooooooooooo";
+    private static final String INPUT3="ooooofoooooooooooo";
+    private static Pattern pattern;
+    private static Matcher matcher;
+    private static Matcher matcher2;
+    public static void method4(){
+        pattern=pattern.compile(REGEX2);
+        matcher=pattern.matcher(INPUT2);
+        matcher2=pattern.matcher(INPUT3);
+        System.out.println("Current REGEX2 is:"+REGEX2);
+        System.out.println("Current INPUT2 is:"+INPUT2);
+        System.out.println("Current INPUT3 is:"+INPUT3);
+        System.out.println("lookingAt():"+matcher.lookingAt());
+        System.out.println("matches():"+matcher.matches());
+        System.out.println("lookingAt():"+matcher2.lookingAt());
+    }
+
     public static void main(String[] args) {
         method1();
         method2();
         method3();
+        method4();
     }
 }
