@@ -79,12 +79,20 @@ public class JavaStreamDemo {
             System.out.println(e.getLocalizedMessage());
         }
     }
+    public static void createDir(){
+        String dirname="/tmp/user/java/bin";
+        File d=new File(dirname);
+        d.mkdir();
+    }
+    
     public static void main(String[] args) {
 //        input();
 //        input2();
 //        write();
 //        fileStreamTest();
-        fileStreamTest2();
+//        fileStreamTest2();
+//        createDir();
 
     }
+
 }
