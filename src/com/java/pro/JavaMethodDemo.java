@@ -55,6 +55,9 @@ public class JavaMethodDemo {
         max(5.5,6.6);
         String[] args2={"iPhone","iPhoneX"};
         printt(args2);
+        MyClass t=new MyClass();
+        MyClass t2=new MyClass();
+        System.out.println(t.x+" "+t2.x);
 
     }
 }
