@@ -1,8 +1,11 @@
 package com.java.pro;
 
+import java.sql.Struct;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Locale;
 
 public class JavaDateDemo {
@@ -52,6 +55,32 @@ public class JavaDateDemo {
         }
         System.out.println();
         DiffDemo();
+        Calendar c1=Calendar.getInstance();
+        int year=c1.get(Calendar.YEAR);
+        int month=c1.get(Calendar.MONTH)+1;
+        int date2=c1.get(Calendar.DATE);
+        int hour=c1.get(Calendar.HOUR_OF_DAY);
+        int minute=c1.get(Calendar.MINUTE);
+        int second=c1.get(Calendar.SECOND);
+        int day=c1.get(Calendar.DAY_OF_WEEK);
+
+        String months[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+        int year2;
+        GregorianCalendar gcalendar=new GregorianCalendar();
+        System.out.print("Date:");
+        System.out.print(months[gcalendar.get(Calendar.MONTH)]);
+        System.out.print(" "+gcalendar.get(Calendar.DATE)+"/");
+        System.out.print(year2=gcalendar.get(Calendar.YEAR));
+        System.out.print(" Time:");
+        System.out.print(gcalendar.get(Calendar.HOUR)+":");
+        System.out.print(gcalendar.get(Calendar.MINUTE)+":");
+        System.out.println(gcalendar.get(Calendar.SECOND));
+        if (gcalendar.isLeapYear(year2)){
+            System.out.println("当前年份是闰年");
+        }else {
+            System.out.println("当前年份是平年");
+        }
+
     }
 
     public static void DiffDemo(){
