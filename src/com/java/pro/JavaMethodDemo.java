@@ -76,9 +76,29 @@ public class JavaMethodDemo {
         System.out.println(y.y+" "+y2.y);
         printMax(34,3,3,2,56.5);
         printMax(new double[]{1,2,3});
+        Cake c=new Cake(1);
+        Cake c2=new Cake(2);
+        Cake c3=new Cake(3);
+        c2 = c3 = null;
+        System.gc();
     }
 }
-
+class Cake extends Object{
+    private int id;
+    public Cake(int id){
+        this.id=id;
+        System.out.println("Cake Object "+id+" is created");
+    }
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        System.out.println("Cake Object "+id+" is disposed");
+    }
+//    protected void finalize() throws java.lang.Throwable{
+//        super.finalize();
+//        System.out.println("Cake Object "+id+" is disposed");
+//    }
+}
 class MyClass{
     int x;
     MyClass(){
