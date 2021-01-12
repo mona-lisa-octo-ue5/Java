@@ -58,3 +58,10 @@ public class JavaMethodDemo {
 
     }
 }
+
+class MyClass{
+    int x;
+    MyClass(){
+        x=10;
+    }
+}
