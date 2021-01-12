@@ -27,9 +27,15 @@ public class JavaMethodDemo {
         }
         //学习方法：每天根据一个故事场景写一段中文。例如：妈妈做早餐给我吃。使用百度翻译App翻译为英文和德文。将每天积累的一段话都写在纸上贴在墙壁上。经常反复记忆朗读。
     }
+    public static void nPrintln(String message,int n){
+        for (int i=0;i<n;i++){
+            System.out.println(message);
+        }
+    }
 
     public static void main(String[] args) {
         max(5,6);
         printGrade(100);
+        nPrintln("ABCD",5);
     }
 }
