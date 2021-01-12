@@ -55,11 +55,33 @@ public class JavaPatternDemo {
         System.out.println("matches():"+matcher.matches());
         System.out.println("lookingAt():"+matcher2.lookingAt());
     }
+    public static void ou(){
+        System.out.println();
+    }
+    private static String RE_REGEX="dog";
+    private static String RE_INPUT="The dog says meow."+"All dogs say meow.";
+    private static String RE_REPLACE="cat";
+
+    public static void method5(){
+        Pattern p=Pattern.compile(RE_REGEX);
+        Matcher m=p.matcher(RE_INPUT);
+        RE_INPUT=m.replaceAll(RE_REPLACE);
+        System.out.println(RE_INPUT);
+    }
+
 
     public static void main(String[] args) {
+        ou();
         method1();
+        ou();
         method2();
+        ou();
         method3();
+        ou();
         method4();
+        ou();
+        method5();
+        ou();
+
     }
 }
