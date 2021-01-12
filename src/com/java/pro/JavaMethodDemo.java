@@ -58,7 +58,9 @@ public class JavaMethodDemo {
         MyClass t=new MyClass();
         MyClass t2=new MyClass();
         System.out.println(t.x+" "+t2.x);
-
+        YouClass y=new YouClass(10);
+        YouClass y2=new YouClass(20);
+        System.out.println(y.y+" "+y2.y);
     }
 }
 
@@ -66,5 +68,11 @@ class MyClass{
     int x;
     MyClass(){
         x=10;
+    }
+}
+class YouClass{
+    int y;
+    YouClass(int i){
+        y=i;
     }
 }
