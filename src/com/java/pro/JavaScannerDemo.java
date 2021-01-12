@@ -46,10 +46,26 @@ public class JavaScannerDemo {
         scan.close();
     }
 
+    public static void scannerSum(){
+        Scanner scan=new Scanner(System.in);
+        double sum=0;
+        int m=0;
+        while (scan.hasNextDouble()){
+            double x=scan.nextDouble();
+            m+=1;
+            sum+=x;
+        }
+        System.out.println(m+" 个数的和为："+sum);
+        System.out.println(m+" 个数的平均值是："+(sum/m));
+        scan.close();
+    }
+
     public static void main(String[] args) {
 //        scanner();
 //        scannerNextLine();
-        scannerDemo();
+//        scannerDemo();
+        scannerSum();
+
     }
 
 
