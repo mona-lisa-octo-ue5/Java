@@ -57,9 +57,10 @@ public class JavaStreamDemo {
         }
     }
     public static void main(String[] args) {
-        input();
-        input2();
-        write();
-        fileStreamTest();
+//        input();
+//        input2();
+//        write();
+//        fileStreamTest();
+        
     }
 }
