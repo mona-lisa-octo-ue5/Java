@@ -1,5 +1,8 @@
 package com.java.pro;
 
+import java.io.FileInputStream;
+import java.rmi.RemoteException;
+
 public class JavaExceptionDemo {
 
     public static void exce(){
@@ -12,8 +15,13 @@ public class JavaExceptionDemo {
         System.out.println("Out of the block");
     }
 
+    public void deposit(double amount) throws RemoteException{
+        throw new RemoteException();
+    }
+
     public static void main(String[] args) {
         exce();
+        
 
     }
 
