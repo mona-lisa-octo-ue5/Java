@@ -24,9 +24,15 @@ public class JavaStreamDemo {
 //            System.out.println(str);
 //        }while (!str.equals("end"));
     }
+    public static void write(){
+        int b;
+        b='A';
+        System.out.write(b);
+        System.out.write('\n');
+    }
     public static void main(String[] args) {
         input();
         input2();
-
+        write();
     }
 }
