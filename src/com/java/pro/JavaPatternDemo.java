@@ -25,8 +25,22 @@ public class JavaPatternDemo {
             System.out.println("NO MATCH");
         }
     }
+    private static final String REGEX="\\bcat\\b";
+    private static final String INPUT="cat cat cat cattie cat";
+    public static void method3(){
+        Pattern p=Pattern.compile(REGEX);
+        Matcher m=p.matcher(INPUT);
+        int count=0;
+        while (m.find()){
+            count++;
+            System.out.println("Match number "+count);
+            System.out.println("start():"+m.start());
+            System.out.println("end():"+m.end());
+        }
+    }
     public static void main(String[] args) {
         method1();
         method2();
+        method3();
     }
 }
