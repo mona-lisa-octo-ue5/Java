@@ -32,10 +32,29 @@ public class JavaMethodDemo {
             System.out.println(message);
         }
     }
+    public static double max(double num1,double num2){
+        double res;
+        if (num1>num2){
+            res= num1;
+        }else {
+            res= num2;
+        }
+        System.out.println(res);
+        return res;
+    }
+    public static void printt(String[] args){
+        for (int i=0;i<args.length;i++){
+            System.out.println("args["+i+"]:"+args[i]);
+        }
+    }
 
     public static void main(String[] args) {
         max(5,6);
         printGrade(100);
         nPrintln("ABCD",5);
+        max(5.5,6.6);
+        String[] args2={"iPhone","iPhoneX"};
+        printt(args2);
+
     }
 }
