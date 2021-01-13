@@ -67,7 +67,7 @@ public class JavaEnumDemo {
         for (Color3 c3: Color3.values()){
             System.out.println(c3.getColor()+"、");
         }
-        
+
     }
 }
 enum Color {
