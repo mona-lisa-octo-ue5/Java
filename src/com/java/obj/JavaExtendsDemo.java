@@ -29,6 +29,16 @@ public class JavaExtendsDemo implements A,B {
         d.eat();
         d.sleep();
         d.show();
+
+        Animal a=new Animal("动物",1);
+        a.eat();
+
+        Cat c=new Cat("郭金龙狗",1);
+        c.eat();
+        c.sleep();
+        c.introduction();
+
+        c.eatTest();
     }
 }
 
@@ -55,6 +65,14 @@ class Cat extends Animal{
     public Cat(String myName,int myid){
         super(myName,myid);
     }
+    public void eat(){
+        System.out.println("Cat: eat");
+    }
+    void eatTest(){
+        this.eat();
+        super.eat();
+    }
+
 }
 
 
