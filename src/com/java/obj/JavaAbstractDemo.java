@@ -42,6 +42,7 @@ abstract class Employee4{
     private String name;
     private String address;
     private int number;
+
     public Employee4(String name,String address,int number){
         System.out.println("Constructing an Employee");
         this.name=name;
