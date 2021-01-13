@@ -4,6 +4,13 @@ public class JavaEnumDemo {
 
     enum Color2{
         RED,GREEN,BLUE;
+
+        private Color2(){
+            System.out.println("Constructor called for: "+this.toString());
+        }
+        public void colorInfo(){
+            System.out.println("Universal Color");
+        }
     }
 
     public static void main(String[] args) {
@@ -13,11 +20,12 @@ public class JavaEnumDemo {
             System.out.println(col+" at index "+col.ordinal());
         }
         System.out.println(Color.valueOf("BLUE"));
-        
+
         Color c=Color.BLUE;
         System.out.println(c);
         Color2 c2=Color2.RED;
         System.out.println(c2);
+        c2.colorInfo();
 
         for (Color myVar: Color.values()){
             System.out.println(myVar);
