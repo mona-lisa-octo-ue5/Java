@@ -14,6 +14,43 @@ public class JavaOverrideDemo {
         System.out.println(o.test(1,"test3"));
         System.out.println(o.test("test4",1));
 
+         show(new Cat3());
+         show(new Dog3());
+         Animal3 a3=new Cat3();
+         a3.eat();
+         Cat3 c=(Cat3) a3;
+         c.work();
+
+    }
+
+    public static void show(Animal3 a){
+        a.eat();
+        if (a instanceof Cat3){
+            Cat3 c=(Cat3) a;
+            c.work();
+        }else if (a instanceof Dog3){
+            Dog3 c=(Dog3) a;
+            c.work();
+        }
+    }
+}
+abstract class Animal3{
+    abstract void eat();
+}
+class Cat3 extends Animal3{
+    public void eat(){
+        System.out.println("吃鱼");
+    }
+    public void work(){
+        System.out.println("抓老鼠");
+    }
+}
+class Dog3 extends Animal3{
+    public void eat(){
+        System.out.println("吃骨头");
+    }
+    public void work(){
+        System.out.println("看家");
     }
 }
 class Shape{
