@@ -7,13 +7,32 @@ class Student extends Persion {
 
 }
 
-public class JavaExtendsDemo {
+public class JavaExtendsDemo implements A,B {
+    @Override
+    public void eat() {
+        System.out.println("好好吃饭");
+    }
 
+    @Override
+    public void sleep() {
+        System.out.println("晚上10：30睡觉");
+    }
+
+    @Override
+    public void show() {
+        System.out.println("打开你的健康宝");
+    }
 
     public static void main(String[] args) {
         System.out.println("继承");
+        JavaExtendsDemo d=new JavaExtendsDemo();
+        d.eat();
+        d.sleep();
+        d.show();
     }
 }
+
+
 
 class Animal{
     private String name;
