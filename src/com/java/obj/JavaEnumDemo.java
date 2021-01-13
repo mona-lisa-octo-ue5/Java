@@ -15,6 +15,19 @@ public class JavaEnumDemo {
         for (Color myVar: Color.values()){
             System.out.println(myVar);
         }
+
+        Color myVar=Color.RED;
+        switch (myVar){
+            case RED:
+                System.out.println("红色");
+                break;
+            case GREEN:
+                System.out.println("绿色");
+                break;
+            case BLUE:
+                System.out.println("蓝色");
+                break;
+        }
     }
 }
 enum Color {
