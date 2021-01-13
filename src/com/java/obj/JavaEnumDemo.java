@@ -7,6 +7,13 @@ public class JavaEnumDemo {
     }
 
     public static void main(String[] args) {
+
+        Color[] arr = Color.values();
+        for (Color col: arr){
+            System.out.println(col+" at index "+col.ordinal());
+        }
+        System.out.println(Color.valueOf("BLUE"));
+        
         Color c=Color.BLUE;
         System.out.println(c);
         Color2 c2=Color2.RED;
