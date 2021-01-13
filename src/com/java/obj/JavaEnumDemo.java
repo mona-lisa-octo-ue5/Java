@@ -1,5 +1,25 @@
 package com.java.obj;
 
+import java.security.PublicKey;
+
+enum Color3 {
+    RED{
+        public String getColor() {
+            return "红色";
+        }
+    },
+    GREEN{
+        public String getColor(){
+            return "绿色";
+        }
+    },
+    BLUE{
+        public String getColor(){
+            return "蓝色";
+        }
+    };
+    public abstract String getColor();
+}
 public class JavaEnumDemo {
 
     enum Color2{
@@ -43,6 +63,11 @@ public class JavaEnumDemo {
                 System.out.println("蓝色");
                 break;
         }
+
+        for (Color3 c3: Color3.values()){
+            System.out.println(c3.getColor()+"、");
+        }
+        
     }
 }
 enum Color {
