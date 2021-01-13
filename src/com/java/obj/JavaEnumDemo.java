@@ -11,6 +11,10 @@ public class JavaEnumDemo {
         System.out.println(c);
         Color2 c2=Color2.RED;
         System.out.println(c2);
+
+        for (Color myVar: Color.values()){
+            System.out.println(myVar);
+        }
     }
 }
 enum Color {
