@@ -1,9 +1,12 @@
 package com.java.fortgeschrittenesTutorial;
 
+import com.java.obj.A;
+
 import java.util.*;
 
 public class JavaDataDemo {
     public static void main(String[] args) {
+        arrayList();
         removeIterator();
         iterator();
         properties();
@@ -12,6 +15,16 @@ public class JavaDataDemo {
         vector();
         bitset();
         enumeration();
+    }
+    public static void arrayList(){
+        List<String> list=new ArrayList<String>();
+        list.add("Hello");
+        list.add("World");
+        list.add("HAHAHAHA");
+        for (String str: list){
+            System.out.println(str);
+        }
+
     }
     public static void removeIterator(){
         ArrayList<Integer> numbers=new ArrayList<Integer>();
