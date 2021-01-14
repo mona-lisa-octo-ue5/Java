@@ -17,5 +17,7 @@ public class JavaArrayListDemo {
         sites.add("Weibo");
         System.out.println(sites);
         System.out.println(sites.get(1));
+        sites.set(2,"Wiki");
+        System.out.println(sites);
     }
 }
