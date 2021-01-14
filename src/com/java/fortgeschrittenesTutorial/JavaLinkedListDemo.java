@@ -29,6 +29,15 @@ public class JavaLinkedListDemo {
         System.out.println(sites);
         System.out.println(sites.getFirst());
         System.out.println(sites.getLast());
-
+        System.out.println();
+        for (int size=sites.size(),i=0;i<size;i++){
+            System.out.println(sites.get(i));
+        }
+        System.out.println();
+        for (String i:sites){
+            System.out.println(i);
+        }
+        System.out.println();
+        
     }
 }
