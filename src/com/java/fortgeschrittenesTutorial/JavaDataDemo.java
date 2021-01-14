@@ -21,6 +21,9 @@ public class JavaDataDemo {
         sites.add("Zhihu");
         Iterator<String> it =sites.iterator();
         System.out.println(it.next());
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
     }
     public static void properties(){
         Properties capitals=new Properties();
