@@ -16,5 +16,6 @@ public class JavaArrayListDemo {
         sites.add("Taobao");
         sites.add("Weibo");
         System.out.println(sites);
+        System.out.println(sites.get(1));
     }
 }
