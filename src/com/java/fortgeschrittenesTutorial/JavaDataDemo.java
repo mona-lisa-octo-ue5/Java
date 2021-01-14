@@ -1,14 +1,23 @@
 package com.java.fortgeschrittenesTutorial;
 
-import java.util.BitSet;
-import java.util.Enumeration;
-import java.util.Vector;
+import java.util.*;
 
 public class JavaDataDemo {
     public static void main(String[] args) {
+        map();
         vector();
         bitset();
         enumeration();
+    }
+    public static void map(){
+        Map m=new HashMap();
+        m.put("Zara","8");
+        m.put("Mahnaz","31");
+        m.put("Ayan","12");
+        m.put("Daisy","14");
+        System.out.println();
+        System.out.println(" Map Elements");
+        System.out.println("\t"+m);
     }
     public static void vector(){
         Vector v=new Vector(3,2);
