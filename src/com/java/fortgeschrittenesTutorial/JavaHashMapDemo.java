@@ -23,6 +23,9 @@ public class JavaHashMapDemo {
         sites.put(4,"Zhihu");
         sites.put(4,"JueJing");
         System.out.println(sites);
+        System.out.println(sites.get(3));
+        sites.remove(4);
+        System.out.println(sites);
     }
 
 
