@@ -25,6 +25,16 @@ public class JavaDataDemo {
             System.out.println(str);
         }
 
+        String[] strArray=new String[list.size()];
+        list.toArray(strArray);
+        for (int i=0;i<strArray.length;i++){
+            System.out.println(strArray[i]);
+        }
+
+        Iterator<String> ite=list.iterator();
+        while (ite.hasNext()){
+            System.out.println(ite.next());
+        }
     }
     public static void removeIterator(){
         ArrayList<Integer> numbers=new ArrayList<Integer>();
