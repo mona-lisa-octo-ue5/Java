@@ -11,7 +11,7 @@ public class JavaGenericsDemo implements java.io.Serializable {
     public void mailCheck(){
         System.out.println("Mailing a check to "+name+" "+address);
     }
-    
+
 
     public static void main(String[] args) {
 
