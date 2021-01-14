@@ -26,5 +26,12 @@ public class JavaObjectDemo implements Cloneable {
         Object obj3= obj1;
         System.out.println(obj1.equals(obj3));
 
+        String str1 = new String();
+        String str2 = new String();
+        System.out.println(str1.equals(str2));
+        str1="Runoob";
+        str2="Google";
+        System.out.println(str1.equals(str2));
+
     }
 }
