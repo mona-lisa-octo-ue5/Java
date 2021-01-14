@@ -19,5 +19,8 @@ public class JavaArrayListDemo {
         System.out.println(sites.get(1));
         sites.set(2,"Wiki");
         System.out.println(sites);
+        sites.remove(3);
+        System.out.println(sites);
+
     }
 }
