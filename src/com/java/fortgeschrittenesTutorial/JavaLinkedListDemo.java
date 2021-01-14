@@ -18,5 +18,17 @@ public class JavaLinkedListDemo {
         System.out.println();
         sites.addFirst("Wiki");
         System.out.println(sites);
+        System.out.println();
+        sites.addLast("Book");
+        System.out.println(sites);
+        System.out.println();
+        sites.removeFirst();
+        System.out.println(sites);
+        System.out.println();
+        sites.removeLast();
+        System.out.println(sites);
+        System.out.println(sites.getFirst());
+        System.out.println(sites.getLast());
+
     }
 }
