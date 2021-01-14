@@ -6,9 +6,19 @@ import java.util.ArrayList;
 
 public class JavaArrayListDemo {
     public static void main(String[] args) {
+        other();
         add();
     }
-
+    public static void other(){
+        ArrayList<Integer> myNumbers=new ArrayList<Integer>();
+        myNumbers.add(10);
+        myNumbers.add(15);
+        myNumbers.add(20);
+        myNumbers.add(25);
+        for (int i: myNumbers){
+            System.out.println(i);
+        }
+    }
     public static void add(){
         ArrayList<String> sites=new ArrayList<String>();
         sites.add("Google");
@@ -25,5 +35,9 @@ public class JavaArrayListDemo {
         for (int i=0;i<sites.size();i++){
             System.out.println(sites.get(i));
         }
+        for (String i: sites){
+            System.out.println(i);
+        }
+
     }
 }
