@@ -4,6 +4,7 @@ import java.util.*;
 
 public class JavaDataDemo {
     public static void main(String[] args) {
+        removeIterator();
         iterator();
         properties();
         hashtable();
@@ -12,7 +13,22 @@ public class JavaDataDemo {
         bitset();
         enumeration();
     }
-
+    public static void removeIterator(){
+        ArrayList<Integer> numbers=new ArrayList<Integer>();
+        numbers.add(12);
+        numbers.add(8);
+        numbers.add(2);
+        numbers.add(23);
+        numbers.add(5);
+        Iterator<Integer> it=numbers.iterator();
+        while (it.hasNext()){
+            Integer i=it.next();
+            if (i<10){
+                it.remove();
+            }
+        }
+        System.out.println(numbers);
+    }
     public static void iterator(){
         ArrayList<String> sites=new ArrayList<String>();
         sites.add("Google");
