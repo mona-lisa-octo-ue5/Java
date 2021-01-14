@@ -15,5 +15,8 @@ public class JavaLinkedListDemo {
         sites.add("Taobao");
         sites.add("Weibo");
         System.out.println(sites);
+        System.out.println();
+        sites.addFirst("Wiki");
+        System.out.println(sites);
     }
 }
