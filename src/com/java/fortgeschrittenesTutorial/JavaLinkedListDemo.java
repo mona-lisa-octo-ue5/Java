@@ -38,6 +38,6 @@ public class JavaLinkedListDemo {
             System.out.println(i);
         }
         System.out.println();
-        
+
     }
 }
