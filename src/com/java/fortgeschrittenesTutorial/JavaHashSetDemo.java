@@ -19,8 +19,6 @@ public class JavaHashSetDemo {
         for (String i: sites){
             System.out.println(i);
         }
-        
-
     }
     public static void add(){
         HashSet<String> sites=new HashSet<String>();
