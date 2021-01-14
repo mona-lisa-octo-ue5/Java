@@ -14,6 +14,13 @@ public class JavaHashMapDemo {
         sites.put("two","Runoob");
         sites.put("three","Taobao");
         System.out.println(sites);
+        System.out.println(sites.size());
+        for (String i:sites.keySet()){
+            System.out.println("key: "+i+" value: "+sites.get(i));
+        }
+        for (String value: sites.values()){
+            System.out.println(value+", ");
+        }
     }
     public static void add(){
         HashMap<Integer,String> sites = new HashMap<Integer,String>();
@@ -25,6 +32,8 @@ public class JavaHashMapDemo {
         System.out.println(sites);
         System.out.println(sites.get(3));
         sites.remove(4);
+        System.out.println(sites);
+        sites.clear();
         System.out.println(sites);
     }
 
