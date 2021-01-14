@@ -3,6 +3,8 @@ package com.java.fortgeschrittenesTutorial;
 import com.java.obj.A;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class JavaArrayListDemo {
     public static void main(String[] args) {
@@ -12,10 +14,15 @@ public class JavaArrayListDemo {
     public static void other(){
         ArrayList<Integer> myNumbers=new ArrayList<Integer>();
         myNumbers.add(10);
-        myNumbers.add(15);
+        myNumbers.add(55);
         myNumbers.add(20);
         myNumbers.add(25);
         for (int i: myNumbers){
+            System.out.println(i);
+        }
+        System.out.println();
+        Collections.sort(myNumbers);
+        for (int i:myNumbers){
             System.out.println(i);
         }
     }
@@ -38,6 +45,10 @@ public class JavaArrayListDemo {
         for (String i: sites){
             System.out.println(i);
         }
-
+        System.out.println();
+        Collections.sort(sites);
+        for (String i:sites){
+            System.out.println(i);
+        }
     }
 }
