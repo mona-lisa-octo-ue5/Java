@@ -21,6 +21,9 @@ public class JavaArrayListDemo {
         System.out.println(sites);
         sites.remove(3);
         System.out.println(sites);
-
+        System.out.println(sites.size());
+        for (int i=0;i<sites.size();i++){
+            System.out.println(sites.get(i));
+        }
     }
 }
