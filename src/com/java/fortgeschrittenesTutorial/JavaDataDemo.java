@@ -6,6 +6,7 @@ import java.util.*;
 
 public class JavaDataDemo {
     public static void main(String[] args) {
+        hashMap();
         arrayList();
         removeIterator();
         iterator();
@@ -15,6 +16,16 @@ public class JavaDataDemo {
         vector();
         bitset();
         enumeration();
+    }
+    public static void hashMap(){
+        Map<String,String> map=new HashMap<String,String>();
+        map.put("1","value1");
+        map.put("2","value2");
+        map.put("3","value3");
+        System.out.println("通过Map.keySet遍历key 和value: ");
+        for (String key: map.keySet()){
+            System.out.println("key= "+key+" and value= "+map.get(key));
+        }
     }
     public static void arrayList(){
         List<String> list=new ArrayList<String>();
