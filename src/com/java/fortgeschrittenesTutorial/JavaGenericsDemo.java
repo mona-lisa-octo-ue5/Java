@@ -3,6 +3,13 @@ package com.java.fortgeschrittenesTutorial;
 public class JavaGenericsDemo {
     public static void main(String[] args) {
 
+        Box<Integer> integerBox=new Box<Integer>();
+        Box<String> stringBox=new Box<String>();
+        integerBox.add(new Integer(10));
+        stringBox.add(new String("菜鸟教程"));
+        System.out.printf("整型值为： %d\n\n",integerBox.get());
+        System.out.printf("字符串为：%s\n",stringBox.get());
+
         System.out.printf("%d, %d 和 %d 中最大的数为 %d\n\n",3,4,5,maximum(3,4,5));
         System.out.printf("%.1f, %.1f 和 %.1f 中最大的数为 %.1f\n\n",6.6,8.8,7.7,maximum(6.6,8.8,7.7));
         System.out.printf("%s, %s 和 %s 中最大的数为 %s\n","pear","apple","orange",maximum("pear","apple","orange"));
@@ -34,4 +41,13 @@ public class JavaGenericsDemo {
         System.out.println();
     }
 
+}
+class Box<T>{
+    private T t;
+    public void add(T t){
+        this.t=t;
+    }
+    public T get(){
+        return t;
+    }
 }
