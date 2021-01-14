@@ -4,6 +4,7 @@ import java.util.*;
 
 public class JavaDataDemo {
     public static void main(String[] args) {
+        iterator();
         properties();
         hashtable();
         map();
@@ -12,6 +13,15 @@ public class JavaDataDemo {
         enumeration();
     }
 
+    public static void iterator(){
+        ArrayList<String> sites=new ArrayList<String>();
+        sites.add("Google");
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Zhihu");
+        Iterator<String> it =sites.iterator();
+        System.out.println(it.next());
+    }
     public static void properties(){
         Properties capitals=new Properties();
         Set states;
