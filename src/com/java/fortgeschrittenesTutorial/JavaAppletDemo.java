@@ -30,7 +30,9 @@ class HelloWorldApplet extends Applet{
 
         }
     }
-    private Color parseColor(String param){}
+    private Color parseColor(String param){
+        return Color.red;
+    }
 }
 class ExampleEventHandling extends Applet implements MouseListener{
     StringBuffer strBuffer;
@@ -88,13 +90,13 @@ class ImageDemo extends Applet{
         if (imageURL==null){
             imageURL="java.jpg";
         }
-        try{
-            URL url=new URL(this.getDocumentBase(),imageURL);
-            image=context.getImage(url);
-        }catch (MalformedURLException e){
-            e.printStackTrace();
-            context.showStatus("Could not load image!");
-        }
+//        try{
+//            URL url=new URL(this.getDocumentBase(),imageURL);
+////            image=context.getImage(url);
+//        }catch (MalformedURLException e){
+//            e.printStackTrace();
+//            context.showStatus("Could not load image!");
+//        }
     }
 
     public void paint(Graphics g){
@@ -113,13 +115,13 @@ class AudioDemo extends Applet{
         if (audioURL==null){
             audioURL="default.au";
         }
-        try {
-            URL url=new URL(this.getDocumentBase(),audioURL);
-            clip = context.getAudioClip(url);
-        }catch (MalformedURLException e){
-            e.printStackTrace();
-            context.showStatus("Could not load audio file!");
-        }
+//        try {
+//            URL url=new URL(this.getDocumentBase(),audioURL);
+//            clip = context.getAudioClip(url);
+//        }catch (MalformedURLException e){
+//            e.printStackTrace();
+//            context.showStatus("Could not load audio file!");
+//        }
     }
 
     public void start(){
