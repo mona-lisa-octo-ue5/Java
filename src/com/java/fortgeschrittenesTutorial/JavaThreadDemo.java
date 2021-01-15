@@ -31,5 +31,10 @@ class RunnableDemo implements Runnable {
     }
 }
 public class JavaThreadDemo {
-
+    public static void main(String[] args) {
+        RunnableDemo r=new RunnableDemo("Thread-1");
+        r.start();
+        RunnableDemo r2=new RunnableDemo("Thread-2");
+        r2.start();
+    }
 }

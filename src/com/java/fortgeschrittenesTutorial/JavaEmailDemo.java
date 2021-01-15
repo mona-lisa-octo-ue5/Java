@@ -13,7 +13,7 @@ public class JavaEmailDemo {
         String to="iosshiyulong@yeah.net";
         String from="644929132@qq.com";
         String host="localhost";
-        SSLSession session=SSLSession.
+//        SSLSession session=SSLSession.
 
     }
 
@@ -23,6 +23,6 @@ public class JavaEmailDemo {
         String host="localhost";
         Properties properties= System.getProperties();
         properties.setProperty("mail.smtp.host",host);
-        SSLSession
+//        SSLSession
     }
 }
