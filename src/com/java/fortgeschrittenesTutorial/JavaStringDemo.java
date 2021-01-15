@@ -1,7 +1,10 @@
 package com.java.fortgeschrittenesTutorial;
 
+import java.util.StringTokenizer;
+
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m9();
         m8();
         m7();
         m6();
@@ -11,6 +14,19 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m9(){
+        String str = "This is String , split by StringTokenizer, created by runoob";
+        StringTokenizer st = new StringTokenizer(str);
+        System.out.println("----- 通过空格分隔 -----");
+        while (st.hasMoreElements()) {
+            System.out.println(st.nextElement());
+        }
+        System.out.println("----- 通过逗号分隔 -----");
+        StringTokenizer st2 = new StringTokenizer(str, ",");
+        while (st2.hasMoreElements()) {
+            System.out.println(st2.nextElement());
+        }
+    }
     public static void m8(){
         String str = "www-runoob-com";
         String[] temp;
