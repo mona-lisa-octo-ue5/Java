@@ -1,9 +1,8 @@
 package com.java.fortgeschrittenesTutorial;
 
+import javax.xml.crypto.Data;
 import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
+import java.net.*;
 import java.util.SortedMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -148,6 +147,40 @@ class Server{
             }
         }else {
             return 9999;
+        }
+    }
+}
+class UPDServer{
+    public static void myMain(String[] args) {
+        try{
+            DatagramSocket server=new DatagramSocket(5060);
+            DatagramPacket packet=new DatagramPacket(new byte[1024],1024);
+            server.receive(packet);
+            System.out.println(packet.getAddress().getHostName()+"("+packet.getPort()+")"+new String(packet.getData()));
+            packet.setData("Hello Client".getBytes());
+            packet.setPort(5070);
+            packet.setAddress(InetAddress.getLocalHost());
+            server.send(packet);
+            server.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+class UDPClient{
+    public static void mymain(String[] args) {
+        try{
+            DatagramSocket client=new DatagramSocket(5070);
+            DatagramPacket packet=new DatagramPacket(new byte[1024],1024);
+            packet.setPort(5060);
+            packet.setAddress(InetAddress.getLocalHost());
+            packet.setData("Hello Server".getBytes());
+            client.send(packet);
+            client.receive(packet);
+            System.out.println(packet.getAddress().getHostName()+"("+packet.getPort()+")"+new String(packet.getData()));
+            client.close();
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 }
