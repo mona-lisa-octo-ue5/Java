@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m10();
         m9();
         m8();
         m7();
@@ -14,6 +15,12 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m10() {
+        String str = "string runoob";
+        String strUpper = str.toUpperCase();
+        System.out.println("原始字符串： "+str);
+        System.out.println("转换为大写： "+strUpper);
+    }
     public static void m9(){
         String str = "This is String , split by StringTokenizer, created by runoob";
         StringTokenizer st = new StringTokenizer(str);
