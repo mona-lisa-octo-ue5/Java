@@ -1,9 +1,11 @@
 package com.java.fortgeschrittenesTutorial;
 
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m16();
         m15();
         m12();
         m10();
@@ -17,6 +19,11 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m16() {
+        double e = Math.E;
+        System.out.format("%f%n", e);
+        System.out.format(Locale.CHINA, "%-10.4f%n%n", e);
+    }
     public static void m15() {
         String variables[] = new String[50000];
         for (int i = 0; i < 50000; i++) {
