@@ -2,10 +2,17 @@ package com.java.fortgeschrittenesTutorial;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m6();
         m5();
         m4();
         String str="this is Java";
         System.out.println(removeCharAt(str,3));
+    }
+    public static void m6(){
+        String s="runoob";
+        String reverse=new StringBuffer(s).reverse().toString();
+        System.out.println("字符串反转前："+s);
+        System.out.println("字符串反转后："+reverse);
     }
     public static void m5(){
         String str="Hello World";
