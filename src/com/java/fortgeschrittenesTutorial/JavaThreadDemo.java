@@ -1,5 +1,10 @@
 package com.java.fortgeschrittenesTutorial;
 
+import com.sun.jdi.event.ExceptionEvent;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+
 class RunnableDemo implements Runnable {
     private Thread t;
     private String threadName;
@@ -71,6 +76,16 @@ class DisplayMessage implements Runnable{
         }
     }
 }
+class CallableThreadTest implements Callable<Integer>{
+    @Override
+    public Integer call() throws Exception {
+        int i=0;
+        for (;i<100;i++){
+            System.out.println(Thread.currentThread().getName()+" "+i);
+        }
+        return i;
+    }
+}
 public class JavaThreadDemo {
     public static void main(String[] args) {
         RunnableDemo r=new RunnableDemo("Thread-1");
@@ -81,6 +96,22 @@ public class JavaThreadDemo {
         t.start();
         ThreadDemo t2=new ThreadDemo("Thread-2-2");
         t2.start();
+
+        CallableThreadTest c=new CallableThreadTest();
+        FutureTask<Integer> f=new FutureTask<>(c);
+        for (int i=0;i<100;i++){
+            System.out.println(Thread.currentThread().getName()+" 的循环变量i 的值"+i);
+            if (20==i){
+                new Thread(f,"有返回值的线程").start();
+            }
+        }
+        try{
+            System.out.println("子线程的返回值： "+f.get());
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 }
