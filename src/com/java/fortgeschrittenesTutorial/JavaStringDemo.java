@@ -2,6 +2,7 @@ package com.java.fortgeschrittenesTutorial;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m8();
         m7();
         m6();
         m5();
@@ -10,6 +11,25 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m8(){
+        String str = "www-runoob-com";
+        String[] temp;
+        String delimeter = "_";
+        temp = str.split(delimeter);
+        for (int i = 0; i < temp.length; i++) {
+            System.out.println(temp[i]);
+            System.out.println("");
+        }
+        System.out.println("----java for each循环输出的方法------");
+        String str1 = "www.runoob.com";
+        String[] temp1;
+        String delimeter1 = "\\.";
+        temp1 = str1.split(delimeter1);
+        for (String x : temp1) {
+            System.out.println(x);
+            System.out.println("");
+        }
+    }
     public static void m7(){
         String strOrig="Google Runoob Taobao";
         int intIndex = strOrig.indexOf("Runoob");
