@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m15();
         m12();
         m10();
         m9();
@@ -16,6 +17,31 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m15() {
+        String variables[] = new String[50000];
+        for (int i = 0; i < 50000; i++) {
+            variables[i] = "s" + i;
+        }
+        long startTime0 = System.currentTimeMillis();
+        for (int i = 0; i < 50000; i++) {
+            variables[i] = "hello";
+        }
+        long endTime0 = System.currentTimeMillis();
+        System.out.println("直接使用字符串：" + (endTime0-startTime0) + " ms" );
+        long startTime1 = System.currentTimeMillis();
+        for (int i = 0; i < 50000; i++) {
+            variables[i] = new String("hello");
+        }
+        long endTime1 = System.currentTimeMillis();
+        System.out.println("使用 new 关键词：" + (endTime1 - startTime1) + " ms");
+        long startTime2 = System.currentTimeMillis();
+        for (int i = 0; i < 50000; i++) {
+            variables[i] = new String("hello");
+            variables[i] = variables[i].intern();
+        }
+        long endTime2 = System.currentTimeMillis();
+        System.out.println("使用字符串对象的 intern() 方法：" + (endTime2 - startTime2) + " ms");
+    }
     public static void m12() {
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 50000; i++) {
