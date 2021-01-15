@@ -59,6 +59,18 @@ class ThreadDemo extends Thread{
         }
     }
 }
+
+class DisplayMessage implements Runnable{
+    private String message;
+    public DisplayMessage(String message){
+        this.message=message;
+    }
+    public void run(){
+        while (true){
+            System.out.println(message);
+        }
+    }
+}
 public class JavaThreadDemo {
     public static void main(String[] args) {
         RunnableDemo r=new RunnableDemo("Thread-1");
