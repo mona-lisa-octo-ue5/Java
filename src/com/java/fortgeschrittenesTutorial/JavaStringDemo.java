@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m12();
         m10();
         m9();
         m8();
@@ -15,6 +16,30 @@ public class JavaStringDemo {
         System.out.println(removeCharAt(str,3));
     }
 
+    public static void m12() {
+        long startTime = System.currentTimeMillis();
+        for (int i = 0; i < 50000; i++) {
+            String s1 = "hello";
+            String s2 = "hello";
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println("通过 String 关键词创建字符串" + " : " + (endTime - startTime) + " 毫秒" );
+        long startTime1 = System.currentTimeMillis();
+        for (int i = 0; i < 50000; i++) {
+            String s3 = new String("hello");
+            String s4 = new String("hello");
+        }
+        long endTime1 = System.currentTimeMillis();
+        System.out.println("通过 String 对象创建字符串" + " : " + (endTime1 - startTime1) + " 毫秒");
+    }
+    public static void m11() {
+        String first_str = "Welcome to Microsoft";
+        String second_str = "I work with microsoft";
+//        boolean match1 = first_str;
+//        regionMatches(11, second_str, 12, 9);
+//        boolean match2 = first_str;
+
+    }
     public static void m10() {
         String str = "string runoob";
         String strUpper = str.toUpperCase();
