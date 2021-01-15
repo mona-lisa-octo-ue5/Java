@@ -2,11 +2,22 @@ package com.java.fortgeschrittenesTutorial;
 
 public class JavaStringDemo {
     public static void main(String[] args) {
+        m7();
         m6();
         m5();
         m4();
         String str="this is Java";
         System.out.println(removeCharAt(str,3));
+    }
+
+    public static void m7(){
+        String strOrig="Google Runoob Taobao";
+        int intIndex = strOrig.indexOf("Runoob");
+        if (intIndex == -1){
+            System.out.println("没有找到字符串 Runoob");
+        }else {
+            System.out.println("Runoob 字符串位置 "+intIndex);
+        }
     }
     public static void m6(){
         String s="runoob";
