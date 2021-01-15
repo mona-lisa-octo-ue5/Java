@@ -1,10 +1,12 @@
 package com.java.fortgeschrittenesTutorial;
 
 import java.applet.Applet;
+import java.applet.AppletContext;
 import java.awt.*;
 import java.awt.desktop.AppEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.MalformedURLException;
 
 class HelloWorldApplet extends Applet{
     public void paint(Graphics g){
@@ -74,5 +76,29 @@ public class JavaAppletDemo {
     public static void main(String[] args) {
         HelloWorldApplet a=new HelloWorldApplet();
 
+    }
+}
+class ImageDemo extends Applet{
+    private Image image;
+    private AppletContext context;
+    public void init() {
+        context=this.getAppletContext();
+        String imageURL=this.getParameter("image");
+        if (imageURL==null){
+            imageURL="java.jpg";
+        }
+        try{
+            URL url=new URL(this.getDocumentBase(),imageURL);
+            image=context.getImage(url);
+        }catch (MalformedURLException e){
+            e.printStackTrace();
+            context.showStatus("Could not load image!");
+        }
+    }
+
+    public void paint(Graphics g){
+        context.showStatus("Displaying image");
+        g.drawImage(image,0,0,200,84,null);
+        g.drawString("www.javalicense.com",35,100);
     }
 }
