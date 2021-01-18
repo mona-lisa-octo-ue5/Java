@@ -7,7 +7,9 @@ import java.util.BitSet;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.TimeZone;
+import java.util.regex.Pattern;
 
+import org.json.*
 
 public class LSUtil {
     private static BitSet URI_UNRESERVED_CHARACTERS = new BitSet();
@@ -110,6 +112,33 @@ public class LSUtil {
 
     public static JSONObject getGeneralError(int errorCode, String errorMsg) {
         JSONObject json = new JSONObject();
+        json.put("error_code", errorCode);
+        json.put("error_msg", errorMsg);
+        return json;
+    }
 
+    public static boolean isLiteral(String input) {
+        Pattern pattern = Pattern.compile("[0-9a-zA-Z_]*]");
+        return pattern.matcher(input).matches();
+    }
+
+    static {
+        int i;
+        for (i = 97; i <= 122; ++i) {
+            URI_UNRESERVED_CHARACTERS.set(i);
+        }
+        for (i = 65; i<= 90; ++i){
+            URI_UNRESERVED_CHARACTERS.set(i);
+        }
+        for (i=48;i<=57;++i){
+            URI_UNRESERVED_CHARACTERS.set(i);
+        }
+        URI_UNRESERVED_CHARACTERS.set(45);
+        URI_UNRESERVED_CHARACTERS.set(46);
+        URI_UNRESERVED_CHARACTERS.set(95);
+        URI_UNRESERVED_CHARACTERS.set(126);
+        for (i=0;i<PERCENT_ENCODED_STRINGS.length;++i){
+            PERCENT_ENCODED_STRINGS[i]=String.format("%%%02X",i);
+        }
     }
 }
