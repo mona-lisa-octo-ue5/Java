@@ -1,5 +1,5 @@
 package com.ls.apns;
 
 public class LSFeedbackService {
-    public LSFeedbackService(ApnsC)
+//    public LSFeedbackService(ApnsC)
 }

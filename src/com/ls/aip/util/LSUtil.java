@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.TimeZone;
 import java.util.regex.Pattern;
 
-import org.json.*
+import org.json.JSONObject;
 
 public class LSUtil {
     private static BitSet URI_UNRESERVED_CHARACTERS = new BitSet();

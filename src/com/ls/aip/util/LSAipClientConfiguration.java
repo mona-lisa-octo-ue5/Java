@@ -12,7 +12,7 @@ public class LSAipClientConfiguration {
     public LSAipClientConfiguration() {
         this.connectionTimeoutMillis=0;
         this.socketTimeoutMills=0;
-        this.proxy=Proxy.NO_PROXY;
+//        this.proxy=Proxy.NO_PROXY;
     }
     public LSAipClientConfiguration(int connectionTimeoutMillis, int socketTimeoutMills, Proxy proxy) {
         this.connectionTimeoutMillis=connectionTimeoutMillis;
@@ -46,6 +46,6 @@ public class LSAipClientConfiguration {
 
     public void setProxy(String host, int port, Type type){
         SocketAddress addr = new InetSocketAddress(host, port);
-        this.proxy=new Proxy(type, addr);
+//        this.proxy=new Proxy(type, addr);
     }
 }

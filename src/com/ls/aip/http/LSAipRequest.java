@@ -82,11 +82,14 @@ public class LSAipRequest {
                 while (var5.hasNext()) {
                     Map.Entry<String, Object> entry = (Map.Entry<String, Object>) var5.next();
                     if (entry.getValue() != null && !entry.getValue().equals("")) {
-                        arr.add(String.format("%s=%s",))
+//                        arr.add(String.format("%s=%s",))
                     }
                 }
             }
         }
+
+        return "123";
     }
+
 
 }
