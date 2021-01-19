@@ -2,14 +2,19 @@ package com.db.redis;
 
 import redis.clients.jedis.Jedis;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+
 
 public class RedisJava {
     public static void main(String[] args) {
 //        ping();
 //        strPing();
-        list();
+//        list();
+        keys();
     }
+
     public static void ping() {
         Jedis jedis = new Jedis("localhost");
         System.out.println("连接成功");
@@ -30,6 +35,16 @@ public class RedisJava {
         List<String> list=j.lrange("site-list",0,2);
         for (int i=0;i<list.size();i++){
             System.out.println("列表项为： "+list.get(i));
+        }
+    }
+    public static void keys() {
+        Jedis j=new Jedis("localhost");
+        System.out.println("连接成功");
+        Set<String> k=j.keys("*");
+        Iterator<String> t= k.iterator();
+        while (t.hasNext()){
+            String key=t.next();
+            System.out.println(key);
         }
     }
 }
