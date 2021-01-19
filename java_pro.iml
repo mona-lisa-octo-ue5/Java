@@ -10,5 +10,6 @@
     <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" name="activation" level="project" />
     <orderEntry type="library" name="mail" level="project" />
+    <orderEntry type="library" name="jedis-3.4.1" level="project" />
   </component>
 </module>
