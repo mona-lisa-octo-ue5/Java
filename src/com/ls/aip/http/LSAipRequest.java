@@ -1,8 +1,12 @@
 package com.ls.aip.http;
 
 import com.ls.aip.util.LSAipClientConfiguration;
+import com.ls.aip.util.LSUtil;
+import jdk.jshell.execution.Util;
+import org.json.JSONObject;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -82,14 +86,87 @@ public class LSAipRequest {
                 while (var5.hasNext()) {
                     Map.Entry<String, Object> entry = (Map.Entry<String, Object>) var5.next();
                     if (entry.getValue() != null && !entry.getValue().equals("")) {
-//                        arr.add(String.format("%s=%s",))
+                        arr.add(String.format("%s=%s", LSUtil.uriEncode((String) entry.getKey(), true),LSUtil.uriEncode(entry.getValue().toString(), true)));
+                    }else {
+                        arr.add(LSUtil.uriEncode((String) entry.getKey(), true));
                     }
                 }
+                return LSUtil.mkString(arr.iterator(), '&');
             }
+        }else if (!this.bodyFormat.equals(LSEBodyFormat.RAW_JSON)) {
+            return this.bodyFormat.equals(LSEBodyFormat.RAW_JSON_ARRAY) ? (String) this.body.get("body") : "";
+        }else {
+            JSONObject json=new JSONObject();
+            Iterator var3=this.body.entrySet().iterator();
+            while (var3.hasNext()){
+                Map.Entry<String, Object> entry=(Map.Entry<String, Object>) var3.next();
+                json.put((String) entry.getKey(), entry.getValue());
+            }
+            return json.toString();
         }
-
-        return "123";
     }
 
+    public String getParamStr() {
+        StringBuffer buffer=new StringBuffer();
+        Iterator var2=this.params.entrySet().iterator();
+        while (var2.hasNext()){
+            Map.Entry<String, String> entry=(Map.Entry<String, String>) var2.next();
+            buffer.append(String.format("%s=%s&", entry.getKey(), entry.getValue()));
+        }
+        if (buffer.length()>0){
+            buffer.deleteCharAt(buffer.length()-1);
+        }
+        return buffer.toString();
+    }
 
+    public HashMap<String, Object> getBody() {
+        return this.body;
+    }
+
+    public void setBody(HashMap<String, Object> body) {
+        this.body = body;
+    }
+
+    public void setParams(HashMap<String, String> params) {
+        this.params = params;
+    }
+
+    public HashMap<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public void setHeaders(HashMap<String, String> headers) {
+        this.headers = headers;
+    }
+
+    public URI getUri() {
+        return this.uri;
+    }
+
+    public void setUri(URI uri) {
+        this.uri = uri;
+    }
+    public void setUri(String uri) {
+        try {
+            this.uri=new URI(uri);
+        }catch (URISyntaxException var3) {
+            var3.printStackTrace();
+        }
+    }
+
+    public LSHttpMethodName getHttpMethod() {
+        return this.httpMethod;
+    }
+
+    public void setHttpMethod(LSHttpMethodName httpMethod) {
+        this.httpMethod = httpMethod;
+    }
+
+    public LSAipClientConfiguration getConfig() {
+        return this.config;
+    }
+
+    public void setConfig(LSAipClientConfiguration config) {
+        this.config = config;
+    }
 }
