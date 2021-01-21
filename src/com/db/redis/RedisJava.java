@@ -9,10 +9,10 @@ import java.util.Set;
 
 public class RedisJava {
     public static void main(String[] args) {
-//        ping();
+        ping();
 //        strPing();
 //        list();
-        keys();
+//        keys();
     }
 
     public static void ping() {

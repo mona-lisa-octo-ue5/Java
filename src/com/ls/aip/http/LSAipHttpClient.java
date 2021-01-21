@@ -30,7 +30,8 @@ public class LSAipHttpClient {
                 url=String.format("%s?%s",request.getUri().toString(), request.getParamStr());
             }
             URL console=new URL(url);
-            Proxy proxy=request.getConfig()==null ? Proxy.NO_PROXY : request.getConfig().getProxy();
+//            Proxy proxy=request.getConfig()==null ? Proxy.NO_PROXY : request.getConfig().getProxy();
+            Proxy proxy=Proxy.NO_PROXY;
             HttpURLConnection conn=(HttpURLConnection) console.openConnection(proxy);
             if (request.getConfig() !=null){
                 conn.setConnectTimeout(request.getConfig().getConnectionTimeoutMillis());

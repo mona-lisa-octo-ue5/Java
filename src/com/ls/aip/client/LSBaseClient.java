@@ -17,10 +17,10 @@ public class LSBaseClient {
     protected Calendar expireDate;
     protected LSBaseClient.AuthState state;
     protected LSAipClientConfiguration config;
-    protected static final Logger LOGGER = Logger
+//    protected static final Logger LOGGER = Logger
 
     class AuthState{
-        private EAuthState state;
+//        private EAuthState state;
 
     }
 

@@ -15,17 +15,17 @@ public class LSSignUtil {
     public LSSignUtil(){
 
     }
-    public static String hmacSha256(String key,String data) throws LSAipException{
-        try{
-            Mac mac = Mac.getInstance("HmacSHA256");
-            SecretKeySpec signingKey = new SecretKeySpec(key.getBytes(), mac.getAlgorithm());
-            mac.init(signingKey);
-            return encodeHex(mac.doFinal(data.getBytes()));
-        }catch (Exception var4){
-            var4.printStackTrace();
-            throw new LSAipException(-1, "Fail to generate HMAC-SHA256 signature");
-        }
-    }
+//    public static String hmacSha256(String key,String data) throws LSAipException{
+//        try{
+//            Mac mac = Mac.getInstance("HmacSHA256");
+//            SecretKeySpec signingKey = new SecretKeySpec(key.getBytes(), mac.getAlgorithm());
+//            mac.init(signingKey);
+//            return encodeHex(mac.doFinal(data.getBytes()));
+//        }catch (Exception var4){
+//            var4.printStackTrace();
+////            throw new LSAipException(-1, "Fail to generate HMAC-SHA256 signature");
+//        }
+//    }
 
     public static String md5(String data, String charset) {
         try{

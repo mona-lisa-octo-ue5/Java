@@ -15,25 +15,25 @@ public class LSImageUtil {
     public LSImageUtil(){
 
     }
-    public static String getImageFormatByFile(String filePath){
-        ImageInputStream input=null;
-        try{
-            input = ImageIO.createImageInputStream(new File(filePath));
-            String var2 = getImageFormatByFile(input);
-            return var2;
-        }catch (IOException var12) {
-            var12.printStackTrace();
-        }finally {
-            if (input != null){
-                try{
-                    input.close();
-                }catch (IOException var11){
-                    var11.printStackTrace();
-                }
-            }
-        }
-        return "unknown";
-    }
+//    public static String getImageFormatByFile(String filePath){
+//        ImageInputStream input=null;
+//        try{
+//            input = ImageIO.createImageInputStream(new File(filePath));
+//            String var2 = getImageFormatByFile(input);
+//            return var2;
+//        }catch (IOException var12) {
+//            var12.printStackTrace();
+//        }finally {
+//            if (input != null){
+//                try{
+//                    input.close();
+//                }catch (IOException var11){
+//                    var11.printStackTrace();
+//                }
+//            }
+//        }
+//        return "unknown";
+//    }
 
     public static String getImageFormatByBytes(byte[] content){
         MemoryCacheImageInputStream input=null;
